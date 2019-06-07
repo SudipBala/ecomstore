@@ -1,0 +1,15 @@
+{% load static %}
+ <head>
+     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+     <title>{% block title %}
+              {% if page_title %}{{ page_title }} - {% endif %}
+                  {{ site_name }}{% endblock %}
+          </title>
+     <meta name="keywords" content="{{ meta_keywords }}" />
+     <meta name="description" content="{{ meta_description }}" />
+     <link href="{% static "css/catalog.css"%}" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+         {% block site_wrapper %}{% endblock %}
+  </body>
+</html>
